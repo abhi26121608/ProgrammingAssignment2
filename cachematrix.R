@@ -1,15 +1,36 @@
 ## Put comments here that give an overall description of what your
 ## functions do
 
-## Write a short comment describing this function
 
-makeCacheMatrix <- function(x = matrix()) {
-
+makeCacheMatrix<-function(X=matrix())
+{
+  if(ncol(X)==nrow(X))
+  {
+  INV<-solve(X)
+  INV
+  cacheSolve(INV)
+  }
+  else{
+    
+    print("Enter a valid square matrix")
+  }
+  
 }
 
 
-## Write a short comment describing this function
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+cacheSolve <- function(X)
+{
+    j<<-INV
+  if(!is.null(j)) {
+    message("getting cached data")   ## Return a matrix that is the inverse of 'x'
+    return(j)
+  }
+    
+      else{
+    
+    print("Enter a valid square matrix")
+  }
+    
+  }
+       
 }
